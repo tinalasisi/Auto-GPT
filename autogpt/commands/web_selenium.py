@@ -88,8 +88,8 @@ def scrape_text_with_selenium(url: str) -> tuple[WebDriver, str]:
             options.add_argument("--disable-gpu")
 
         driver = webdriver.Chrome(
-            executable_path=ChromeDriverManager().install(), options=options
-        )
+            executable_path="/usr/bin/chromedriver", options=options
+    )
     driver.get(url)
 
     WebDriverWait(driver, 10).until(
